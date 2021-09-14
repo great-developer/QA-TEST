@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Quize</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container pt-5 mt-5">
+  <div class="progress-part">
+    <div class="d-flex justify-content-center">
+      <h2 class="text-danger font-weight-bold">Choose correct picture</h2>
+    </div>
+    <p class="progress-label">
+      <span class="font-weight-bold text-danger">Progress</span>
+      <span class="result pl-2"><span>
+    </p>
+    <div class="progress" style="height:30px">
+      <div class="progress-bar" style="height:30px"></div>
+    </div>
+  </div>
+  <div class="pt-5 d-flex justify-content-center" id="qa-content">
+    <img id="question-image" src="imgs/1.webp" height="400px">
+    <div class="user-info" style="display: none;">
+      <div>
+        <h2>Almost done</h2>
+        <div class="form-group">
+          <label for="first-name">First Name:</label>
+          <input type="text" class="form-control" placeholder="First Name" id="first-name">
+        </div>
+        <div class="form-group">
+          <label for="last-name">Last Name:</label>
+          <input type="text" class="form-control" placeholder="Last Name" id="last-name">
+        </div>
+        <button class="btn btn-primary" onclick="saveData()">Store results</button>
+        <button class="btn btn-default" onclick="skip()">Skip now</button>
+      </div>
+    </div>
+    <div id="result-panel"></div>
+  </div>
+  <div id="answer-btn">
+    <div class="btn-group d-flex justify-content-center">
+      <button id="a-btn" class="btn btn-success  mr-5" onclick="nextAnswer('a');">A</button>
+      <button id="b-btn" class="btn btn-info  ml-5" onclick="nextAnswer('b');">B</button>
+    </div>
+  </div>
+</div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/helper.js"></script>
+<script src="js/app.js"></script>
+</html>
